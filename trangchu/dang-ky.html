@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dang-nhap.css">
+</head>
+<body>
+    <div class="container">
+        <form class="form-login">
+            <h1>Đăng Ký</h1>
+            <div class="form-text">
+                <label>Nhập Email, số điện thoại</label>
+                <input type="text">
+            </div>
+            <div class="form-text">
+                <label>Mật khẩu</label>
+                <input type="password">
+            </div>
+            <div class="form-text">
+                <label for="">Nhập lại mật khẩu</label>
+                <input type="password">
+            </div>
+            <div>
+                <input type="checkbox">
+                Xác nhận đăng ký
+            </div>
+            <br>
+            <button>Đăng ký</button>
+            
+        </form>
+        <script>
+            const formLogin = document.querySelectorAll('.form-text input')
+            const formLabel = document.querySelectorAll('.form-text label')
+            const formpassword = document.querySelectorAll('.form-text password')
+            for(let i =0; i<2;i++){
+                formLogin[i].addEventListener("mouseover", function(){
+                    formLabel[i].classList.add("focus")
+                })
+                formLogin[i].addEventListener("mouseout", function(){
+                    if(formLogin[i].value ==""){
+                        formLabel[i].classList.remove("focus")
+                    }
+                })
+                
+            }
+    </script>
+    </div>
+</body>
+</html>
